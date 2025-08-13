@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
-class DetailScreen extends StatelessWidget {
+class DetailScreen extends StatefulWidget {
   const DetailScreen({super.key});
 
+  @override
+  State<DetailScreen> createState() => _DetailScreenState();
+}
+
+class _DetailScreenState extends State<DetailScreen> {
+  bool _isFavorite = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +24,7 @@ class DetailScreen extends StatelessWidget {
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 30.0, left: 24.0),
+                        padding: const EdgeInsets.only(top: 36, left: 22),
                         child: Container(
                           padding: EdgeInsets.all(6),
                           decoration: BoxDecoration(
@@ -33,7 +39,7 @@ class DetailScreen extends StatelessWidget {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Icon(Icons.arrow_back_ios, size: 20),
-                                Text('Go back'),
+                                Text('Go Back'),
                               ],
                             ),
                           ),
@@ -41,78 +47,157 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 25),
-                  Image.asset("assets/images/recommend_1.png", width: 180),
+                  Image.asset(
+                    'assets/images/recommend_2.png',
+                    width: 150,
+                    height: 180,
+                  ),
                 ],
               ),
             ),
 
             Container(
-              height: MediaQuery.of(context).size.height * 0.6,
-              padding: EdgeInsets.only(top: 30, left: 24, right: 24),
+              padding: EdgeInsets.only(top: 40, left: 24, right: 24),
+              height: MediaQuery.of(context).size.height * 0.7,
               decoration: BoxDecoration(
                 color: Color(0xffFFFFFF),
                 borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(30),
                   topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
                 ),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
-                    "Quinoa Fruit Salad",
-                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 27),
+                    'Quinoa Fruit Salad',
+                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 28),
                   ),
                   SizedBox(height: 30),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        children: [
-                          Container(
-                            padding: EdgeInsets.all(2),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(100),
-                              color: Color(0xffFFFFFF),
-                              border: Border.all(color: Color(0xff111111)),
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(2),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(100),
+                                color: Color(0xffFFFFFF),
+                                border: Border.all(color: Color(0xff1111111)),
+                              ),
+                              child: Center(child: Icon(Icons.remove)),
                             ),
-                            child: Icon(Icons.remove),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: Text("1", style: TextStyle(fontSize: 22)),
-                          ),
-                          Container(
-                            padding: EdgeInsets.all(2),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(100),
-                              color: Color(0x73FFA551),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 18,
+                              ),
+                              child: Text(
+                                '1',
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
                             ),
-                            child: Icon(Icons.add, color: Color(0xffFFA451)),
-                          ),
-                        ],
+                            Container(
+                              padding: EdgeInsets.all(2),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(100),
+                                color: Color(0xffFFF2E7),
+                                border: Border.all(color: Color(0xff1111111)),
+                              ),
+                              child: Center(child: Icon(Icons.add)),
+                            ),
+                          ],
+                        ),
                       ),
 
                       Text(
-                        "Rp 20.000",
+                        'Rp. 20,000',
                         style: TextStyle(
-                          fontSize: 24,
                           fontWeight: FontWeight.w500,
+                          fontSize: 24,
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 30),
-                  Divider(color: Colors.grey, thickness: 0.5),
-                  SizedBox(height: 30),
-                  Text(
-                    "One Pack Contains:",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+
+                  SizedBox(height: 25),
+                  Divider(
+                    color: Color(0xffBDBDBD).withOpacity(0.50),
+                    thickness: 1,
                   ),
-                  SizedBox(height: 16),
+                  SizedBox(height: 18),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'One Pack Contains:',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Container(
+                        height: 2,
+                        width: 153,
+                        decoration: BoxDecoration(color: Color(0xffFFA451)),
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(height: 8),
+
                   Text(
-                    "Red Quinoa, Lime, Honey, Blueberries, Strawberries, Mango, Fresh mint.",
+                    'Red Quinoa, Lime, Honey, Blueberries, Strawberries, Mango, Fresh mint.',
+                    style: TextStyle(height: 2),
+                  ),
+                  SizedBox(height: 20),
+                  Divider(
+                    color: Color(0xffBDBDBD).withOpacity(0.50),
+                    thickness: 1,
+                  ),
+                  SizedBox(height: 15),
+                  Text(
+                    'If you are looking for a new fruit salad to eat today, quinoa is the perfect brunch for you. make',
+                    style: TextStyle(height: 2),
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          // 3. Panggil setState untuk mengubah status
+                          setState(() {
+                            _isFavorite = !_isFavorite;
+                          });
+                        },
+                        child: Container(
+                          padding: EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            color: Color(0xffFFF7F0),
+                          ),
+                          child: Icon(
+                            _isFavorite
+                                ? Icons.favorite
+                                : Icons.favorite_border_rounded,
+                            size: 24,
+                            color: _isFavorite
+                                ? Colors.orange
+                                : Color(0xffFFA451),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 60),
+                      Expanded(
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          child: Text('Add to Basket'),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),

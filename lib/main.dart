@@ -1,4 +1,7 @@
+// import 'package:ecommerce_mobile/fitures/home/screen/detail_screen.dart';
+
 import 'package:ecommerce_mobile/fitures/splash/splash_screen.dart';
+// import 'package:ecommerce_mobile/fitures/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

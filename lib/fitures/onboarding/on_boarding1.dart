@@ -1,4 +1,5 @@
 import 'package:ecommerce_mobile/fitures/onboarding/on_boarding2.dart';
+import 'package:ecommerce_mobile/preference/color.dart';
 import 'package:flutter/material.dart';
 
 class OnBoarding1 extends StatelessWidget {
@@ -13,7 +14,7 @@ class OnBoarding1 extends StatelessWidget {
             flex: 60,
             child: Container(
               decoration: BoxDecoration(
-                color: Color(0xFFFFA551),
+                color: MainColors.primaryColor,
                 image: DecorationImage(
                   alignment: Alignment(0, 0.5),
                   image: AssetImage('assets/images/onboarding1.png'),
