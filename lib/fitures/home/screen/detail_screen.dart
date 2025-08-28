@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ecommerce_mobile/fitures/cart/screens/cart_screens.dart';
 
 class DetailScreen extends StatefulWidget {
   const DetailScreen({super.key});
@@ -193,7 +194,14 @@ class _DetailScreenState extends State<DetailScreen> {
                       SizedBox(width: 60),
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CartScreen(),
+                              ),
+                            );
+                          },
                           child: Text('Add to Basket'),
                         ),
                       ),

@@ -1,6 +1,8 @@
 // import 'package:ecommerce_mobile/fitures/home/screen/detail_screen.dart';
 
 import 'package:ecommerce_mobile/fitures/splash/splash_screen.dart';
+import 'package:ecommerce_mobile/preference/color.dart';
+
 // import 'package:ecommerce_mobile/fitures/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -39,6 +41,13 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
           ),
+        ),
+        appBarTheme: AppBarTheme(
+          backgroundColor: MainColors.primaryColor,
+          centerTitle: true,
+          toolbarHeight: 100,
+          leadingWidth: 110,
+          surfaceTintColor: MainColors.primaryColor,
         ),
       ),
       home: SplashScreen(),

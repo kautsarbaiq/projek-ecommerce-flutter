@@ -12,4 +12,6 @@ class ItemFoodModel {
     required this.price,
     this.bgColor,
   });
+
+  
 }
