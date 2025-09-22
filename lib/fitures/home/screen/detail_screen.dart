@@ -13,13 +13,15 @@ class _DetailScreenState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFFA451),
+      backgroundColor: Color.fromARGB(255, 189, 189, 189),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
               height: MediaQuery.of(context).size.height * 0.4,
-              decoration: BoxDecoration(color: Color(0xffFFA451)),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 189, 189, 189),
+              ),
               child: Column(
                 children: [
                   Row(
@@ -36,12 +38,32 @@ class _DetailScreenState extends State<DetailScreen> {
                             onTap: () {
                               Navigator.pop(context);
                             },
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Icon(Icons.arrow_back_ios, size: 20),
-                                Text('Go Back'),
-                              ],
+                            borderRadius: BorderRadius.circular(
+                              8,
+                            ), // (Opsional) Agar efek ripple lebih rapi
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8.0,
+                                vertical: 8.0,
+                              ), // Beri sedikit ruang
+                              child: Row(
+                                mainAxisSize: MainAxisSize
+                                    .min, // Penting agar Row tidak memakan semua lebar
+                                children: [
+                                  Icon(
+                                    Icons.arrow_back_ios,
+                                    size: 20,
+                                    color: Colors.black,
+                                  ),
+                                  SizedBox(
+                                    width: 8,
+                                  ), // Beri jarak antara icon dan teks
+                                  Text(
+                                    'Go Back',
+                                    style: TextStyle(color: Colors.black),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -105,7 +127,7 @@ class _DetailScreenState extends State<DetailScreen> {
                               padding: EdgeInsets.all(2),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(100),
-                                color: Color(0xffFFF2E7),
+                                color: Color(0xffFFFFFF),
                                 border: Border.all(color: Color(0xff1111111)),
                               ),
                               child: Center(child: Icon(Icons.add)),
@@ -143,7 +165,9 @@ class _DetailScreenState extends State<DetailScreen> {
                       Container(
                         height: 2,
                         width: 153,
-                        decoration: BoxDecoration(color: Color(0xffFFA451)),
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 152, 152, 152),
+                        ),
                       ),
                     ],
                   ),
@@ -175,19 +199,22 @@ class _DetailScreenState extends State<DetailScreen> {
                           });
                         },
                         child: Container(
-                          padding: EdgeInsets.all(16),
+                          padding: EdgeInsets.all(15),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(100),
-                            color: Color(0xffFFF7F0),
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            border: Border.all(
+                              color: Color.fromARGB(255, 0, 0, 0),
+                            ),
                           ),
                           child: Icon(
                             _isFavorite
                                 ? Icons.favorite
                                 : Icons.favorite_border_rounded,
-                            size: 24,
+                            size: 25,
                             color: _isFavorite
-                                ? Colors.orange
-                                : Color(0xffFFA451),
+                                ? const Color.fromARGB(255, 0, 0, 0)
+                                : Color.fromARGB(255, 0, 0, 0),
                           ),
                         ),
                       ),

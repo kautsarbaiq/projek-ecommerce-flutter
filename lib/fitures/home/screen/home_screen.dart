@@ -36,14 +36,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       'subtitle': 'Honey lime combo',
       'description1': '1004 Tone',
       'description2': 'tone form centela oil',
-      'image': 'assets/images/recommend_1.png',
+      'image': 'assets/images/food_bottom1.png',
     },
     {
       'title': 'Berry Mango',
       'subtitle': 'Tropical combo',
       'description1': 'Fresh Berry',
       'description2': 'mango extract oil',
-      'image': 'assets/images/recommend_2.png',
+      'image': 'assets/images/food_bottom1.png',
     },
     {
       'title': 'Quinoa Fruit',
@@ -116,6 +116,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     _buildCategoriesSection(),
 
                     // For You Section
+                    _buildForYouSection(),
+
+                    _buildForYouSection(),
+
                     _buildForYouSection(),
                   ],
                 ),

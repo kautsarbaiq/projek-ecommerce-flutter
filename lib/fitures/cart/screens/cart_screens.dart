@@ -26,7 +26,7 @@ class CartScreen extends StatelessWidget {
           children: [
             buildItem(
               'Quinona Fruit Salad',
-              'assets/images/food_bottom2.png',
+              'assets/images/food_bottom1.png',
               '2packs',
               'Rp 20.000',
             ),

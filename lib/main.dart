@@ -1,5 +1,6 @@
 // import 'package:ecommerce_mobile/fitures/home/screen/detail_screen.dart';
 
+import 'package:ecommerce_mobile/fitures/home/screen/detail_screen.dart';
 import 'package:ecommerce_mobile/fitures/splash/splash_screen.dart';
 import 'package:ecommerce_mobile/preference/color.dart';
 
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             padding: EdgeInsets.symmetric(vertical: 20),
-            backgroundColor: Color(0xFFFFA551),
+            backgroundColor: Color.fromARGB(255, 41, 41, 41),
             foregroundColor: Colors.white,
             textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
             shape: RoundedRectangleBorder(
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         appBarTheme: AppBarTheme(
-          backgroundColor: MainColors.primaryColor,
+          backgroundColor: const Color.fromARGB(255, 45, 45, 45),
           centerTitle: true,
           toolbarHeight: 100,
           leadingWidth: 110,

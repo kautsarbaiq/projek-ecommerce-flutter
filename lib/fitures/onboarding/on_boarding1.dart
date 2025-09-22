@@ -14,10 +14,10 @@ class OnBoarding1 extends StatelessWidget {
             flex: 60,
             child: Container(
               decoration: BoxDecoration(
-                color: MainColors.primaryColor,
+                color: const Color.fromARGB(255, 225, 225, 225),
                 image: DecorationImage(
                   alignment: Alignment(0, 0.5),
-                  image: AssetImage('assets/images/onboarding1.png'),
+                  image: AssetImage('assets/images/recommend_1.png'),
                   scale: 1.0,
                 ),
               ),

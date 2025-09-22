@@ -8,15 +8,7 @@ class MainColors{
 
 MainColors._();
 
-static const primaryColor = MaterialColor(0xffFFa451, {
-  200: Color(0xffFFa451),
-  300: Color(0xffFFa451),
-  400: Color(0xffFFa451),
-  500: Color(0xffFFa451),
-  600: Color(0xffFFa451),
-  700: Color(0xffFFa451),
-
-});
+static const primaryColor = Color.fromARGB(255, 0, 0, 0);
 
   static const blackColor = MaterialColor(0xff000000, {
     200: Color(0xFF222222),

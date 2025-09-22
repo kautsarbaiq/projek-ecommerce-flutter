@@ -20,10 +20,10 @@ class _OnBoarding2State extends State<OnBoarding2> {
             flex: 60,
             child: Container(
               decoration: BoxDecoration(
-                color: Color(0xFFFFA551),
+                color: const Color.fromARGB(255, 225, 225, 225),
                 image: DecorationImage(
                   alignment: Alignment(0, 0.5),
-                  image: AssetImage('assets/images/onboarding2.png'),
+                  image: AssetImage('assets/images/recommend_2.png'),
                   scale: 1.0,
                 ),
               ),
